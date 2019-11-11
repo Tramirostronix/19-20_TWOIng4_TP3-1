@@ -1,33 +1,54 @@
-.profils {
-    text-align: right;
-    padding-top: 2em;
+.sectionProfile {
+
+    text-align: center;
+    background-color: purple;
+
+  
 }
 
 
+
+.test {
+    text-align: right; 
+}
+
+.sectionMessage {
+    text-align: center; 
+    background-color: blue; 
+}
+
+.profils {
+    text-align: right;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
 .button1 {
-	padding:6px 0 6px 0;
-	font:Bold 13px Arial;
+    
+	padding:6px 0 6px 0em;
+	font:Bold 1em Arial;
 	background:#d34836;
 	color:#fff;
 	width:90px;
 	border-radius:2px;
-	border:none;
+   
+    margin-right: 2em;
 }
 .button2 {
 	padding:6px 0 6px 0;
-	font:bold 13px Arial;
+	font:bold 1em Arial;
 	background:#478bf9;
 	color:#fff;
 	border-radius:2px;
 	width:100px;
-	border:none;
+    margin-right: 2em; 
 }
 .button3 {
 	padding:6px 0 6px 0;
-	font:bold 13px Arial;
-	background:#f5f5;
+	font:bold 1em Arial;
+	background:#f5f5f5;
 	color:#555;
 	border-radius:2px;
 	width:100px;
-    border:1px solid #ccc;
+    margin-right: 2em; 
 }

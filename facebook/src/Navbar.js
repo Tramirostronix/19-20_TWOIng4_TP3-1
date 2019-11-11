@@ -1,16 +1,17 @@
 import React from "react"
 
+
 function Navbar() {
     return ( 
     <nav className = "profils">
         <button className="button1">
-        Gaétan
+            Gaétan
         </button>
         <button className="button2">
-            Myriam
+            Cécile
         </button>
         <button className="button3">
-            Cécile
+            Myriam
         </button>
     </nav>
     )

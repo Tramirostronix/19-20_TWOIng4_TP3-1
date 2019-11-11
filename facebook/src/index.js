@@ -1,5 +1,16 @@
 import React from "react"
 import ReactDOM from "react-dom"
-import App from "./App"
+import Navbar from "./Navbar"
+import MyProfile from "./MyProfile"
+import  "./index.css"
 
-ReactDOM.render(<App/ >, document.getElementById("root"))
+function Facebook () {
+    return (
+        <div>
+            <Navbar />
+            <MyProfile />
+        </div>
+    )
+}
+
+ReactDOM.render(<Facebook/>, document.getElementById("root"))
