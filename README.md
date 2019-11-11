@@ -1,3 +1,8 @@
+Gaetan Lajeune 
+
+sources : 
+http://41mag.fr/18-exemples-de-bouton-en-css-3-inspire-par-google.html
+
 # TP 3: Facebook ultra lite
 
 A lire impérativement avant de commencer quoi que ce soit, ce sont les règles que vous devrez appliquer tout au long du semestre:
