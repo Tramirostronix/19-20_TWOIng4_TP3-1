@@ -4,7 +4,7 @@ const usersData = [
 
     {
         id: 1, 
-        image: "gaetan.jpg",
+        image: "cyberdine.jpg",
         prenom: "Gaétan", 
         nom: "Lajeune",
         dateNaissance: "17/10/1998",
@@ -14,7 +14,7 @@ const usersData = [
 
     {
         id: 2,
-        image : "",
+        image : "yuno.jpg",
         prenom: "Cecile", 
         nom : "Lashermes", 
         dateNaissance : "11/01/1998", 
@@ -25,7 +25,7 @@ const usersData = [
 
     {
         id: 3, 
-        image: "", 
+        image: "smash.jpg", 
         prenom: "Thomas", 
         nom : "Seree",
         dateNaissance : "17/11/1998", 

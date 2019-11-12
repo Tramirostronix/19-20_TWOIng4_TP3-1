@@ -1,9 +1,11 @@
 .sectionProfile {
 
     text-align: center;
-    background-color: purple;
+	background-color: purple;
+	margin-right: 8rem; 
+	margin-left: 8rem; 
 
-  
+	
 }
 
 
@@ -14,43 +16,62 @@
 
 .sectionMessage {
     text-align: center; 
-    background-color: blue; 
+	background-color: blue;
+	margin-right: 8rem; 
+	margin-left: 8rem;
 }
 
 .profils {
     text-align: right;
-    margin-top: 2em;
-	margin-bottom: 2em;
+    margin-top: 2rem;
+	margin-bottom: 2rem;
 
+}
+
+#buttonPosition {
+	text-align: right;
 }
 
 .button1 {
     
 	padding:6px 0 6px 0em;
-	font:Bold 1em Arial;
+	font:Bold 1rem Arial;
 	background:#d34836;
 	color:#fff;
 	width:90px;
 	border-radius:2px;
-	margin-left: 1em; 
-	margin-right: 2em;
-	margin-bottom: 1em;
+	margin-left: 1rem; 
+	margin-right: 2rem;
+	margin-bottom: 1rem;
 }
-.button2 {
-	padding:6px 0 6px 0;
-	font:bold 1em Arial;
-	background:#97f947;
-	color:#fff;
-	border-radius:2px;
-	width:100px;
-    margin-right: 2em; 
+
+#prenom {
+	display: inline; 
+	margin-right: 7rem;
+	font-size: 1.2rem; 
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-.button3 {
-	padding:6px 0 6px 0;
-	font:bold 1em Arial;
-	background:#f5f5f5;
-	color:#555;
-	border-radius:2px;
-	width:100px;
-    margin-right: 2em; 
+
+#nom{
+	display: inline;
+	font-size: 1.2rem;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+
+}
+
+.prenomNom {
+	display: inline; 
+	font-size: 1.3rem; 
+}
+
+#naissance {
+	display: inline; 
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	margin-right: 4rem;
+	font-size: 1.5rem;
+}
+
+#styleButton {
+	text-align: right;
+	margin-right: 1rem;
 }

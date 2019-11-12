@@ -1,5 +1,4 @@
 import React from "react"
-import Gaetan from "./gaetan.jpg"
 import Like from "./Like"
 
 
@@ -24,19 +23,19 @@ class App extends React.Component {
             
             <div className="sectionProfile" style={{backgroundColor:this.state.colory}}>
             <br/>
-            <img src={Gaetan} />
+            <img src={this.props.image}/>
             <p>
-                <span>{`Prénom : ${this.props.prenom} Nom : ${this.props.nom}`} </span> 
+                <div id="prenom"><div className="prenomNom">Prénom : </div>{this.props.prenom}</div> <div id="nom"> <div className="prenomNom">Nom : </div>{this.props.nom}</div> 
              <br/>
              <br/>
              <br/>
-                <span>{`Date de naissance : ${this.props.dateNaissance}`} </span>  
+                <div id="naissance">{`Date de naissance : ${this.props.dateNaissance}`} </div>  
             <br/>
             <br/>
             <br/>
-            <button className= "styleButton" onClick={this.handleButtonStyle} >
+            <div id="styleButton"><button onClick={this.handleButtonStyle} >
                 Change Style
-            </button>
+            </button></div>
             </p>
             </div>
 
@@ -46,7 +45,9 @@ class App extends React.Component {
 
             <div className="sectionMessage">
             <p>
-                <span>{this.props.message}</span>
+                {this.props.message}
+                <br/>
+                <br/>
                 <Like />
             </p>
             </div>

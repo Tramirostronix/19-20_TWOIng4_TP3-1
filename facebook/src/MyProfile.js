@@ -1,19 +1,22 @@
 import React from "react"
 import App from "./App"
 import usersData from "./usersData"
-import Navbar from "./Navbar"
+
 
 class MyProfile extends React.Component {
-    constructor() {
-        super()
+    constructor(props) {
+        super(props)
         this.state = {
             users: usersData,
-            nombre: 1,
-            click: "myriam"
+            nombre: 0,
         }
+        this.handleClickProfile = this.handleClickProfile.bind(this)
     }
 
-   
+    handleClickProfile(i) {
+        this.setState({nombre : i})
+    }
+
 
     render() {
         const userItems= this.state.users.map(item => 
@@ -26,9 +29,19 @@ class MyProfile extends React.Component {
 
         return (
             <div>
-            <Navbar prenom="Gaétan" />
-            <Navbar prenom="Cécile"  />
-            <Navbar prenom="Thomas" /> 
+                <div id="buttonPosition">
+          <button className="button1" onClick={() =>this.handleClickProfile(0)}>
+                Gaétan
+            </button>
+
+            <button className="button1" onClick={() =>this.handleClickProfile(1)}>
+                Cécile
+            </button>
+
+            <button className="button1" onClick={() =>this.handleClickProfile(2)}>
+                Thomas
+            </button>
+            </div>
             {userItems[this.state.nombre]}       
             </div>
         )
