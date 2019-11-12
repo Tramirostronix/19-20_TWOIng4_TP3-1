@@ -3,20 +3,21 @@ import Gaetan from "./gaetan.jpg"
 import Style from "./Style"
 import Like from "./Like"
 
-function App (props) {
-    return (
 
-        <div>
+class App extends React.Component {
+    render() {
+        return (
+            <div>
             
             <div className="sectionProfile">
             <br/>
             <img src={Gaetan} />
             <p>
-                <span>{`Prénom : ${props.prenom} Nom : ${props.nom}`} </span> 
+                <span>{`Prénom : ${this.props.prenom} Nom : ${this.props.nom}`} </span> 
              <br/>
              <br/>
              <br/>
-                <span>{`Date de naissance : ${props.dateNaissance}`} </span>  
+                <span>{`Date de naissance : ${this.props.dateNaissance}`} </span>  
             <br/>
             <br/>
             <br/>
@@ -30,13 +31,16 @@ function App (props) {
 
             <div className="sectionMessage">
             <p>
-                <span>{props.message}</span>
+                <span>{this.props.message}</span>
                 <Like />
             </p>
             </div>
             
         </div>
-    )
+        )
+    }
 }
+
+
 
 export default App

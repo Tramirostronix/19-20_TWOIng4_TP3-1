@@ -1,15 +1,18 @@
 import React from "react"
-import ReactDOM from "react-dom"
 
 
-function Style() {
-    
-    return(
+
+class Style extends React.Component {
+    render() {
+        return(
             <button className= "styleButton">
                 Change Style
             </button>
-    )
-}
+        )
+    }
+} 
+
+
 
 
 

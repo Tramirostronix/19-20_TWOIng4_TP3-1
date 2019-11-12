@@ -4,13 +4,17 @@ import Navbar from "./Navbar"
 import MyProfile from "./MyProfile"
 import  "./index.css"
 
-function Facebook () {
-    return (
-        <div>
+
+class Facebook extends React.Component {
+    render() {
+        return (
+
+            <div>
             <Navbar />
             <MyProfile />
         </div>
-    )
+        )
+    }
 }
 
 ReactDOM.render(<Facebook/>, document.getElementById("root"))
