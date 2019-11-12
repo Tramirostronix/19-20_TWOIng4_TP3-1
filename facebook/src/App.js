@@ -1,15 +1,28 @@
 import React from "react"
 import Gaetan from "./gaetan.jpg"
-import Style from "./Style"
 import Like from "./Like"
 
 
 class App extends React.Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            colory: "purple"
+        }
+        this.handleButtonStyle= this.handleButtonStyle.bind(this)
+    }
+    
+  handleButtonStyle() {
+      this.setState({colory: "red"})
+  }  
+
     render() {
+
+    
         return (
             <div>
             
-            <div className="sectionProfile">
+            <div className="sectionProfile" style={{backgroundColor:this.state.colory}}>
             <br/>
             <img src={Gaetan} />
             <p>
@@ -21,7 +34,9 @@ class App extends React.Component {
             <br/>
             <br/>
             <br/>
-            <Style className = "styleButton" />
+            <button className= "styleButton" onClick={this.handleButtonStyle} >
+                Change Style
+            </button>
             </p>
             </div>
 

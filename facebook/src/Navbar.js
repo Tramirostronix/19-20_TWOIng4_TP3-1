@@ -4,17 +4,9 @@ import React from "react"
 class Navbar extends React.Component {
     render() {
         return (
-            <nav className = "profils">
-            <button className="button1">
-                Gaétan
+            <button className="button1" onClick={this.props.onClick}>
+                {this.props.prenom}
             </button>
-            <button className="button2">
-                Cécile
-            </button>
-            <button className="button3">
-                Myriam
-            </button>
-        </nav>
         )
     }
 }
