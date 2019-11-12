@@ -1,6 +1,6 @@
 import React from "react"
 
-const utilisateurs = [
+const usersData = [
 
     {
         id: 1, 
@@ -35,4 +35,4 @@ const utilisateurs = [
     }
 ]
 
-export default utilisateurs
+export default usersData

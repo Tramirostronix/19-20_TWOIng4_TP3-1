@@ -1,26 +1,29 @@
 import React from "react"
 import App from "./App"
-import utilisateurs from "./utilisateur"
+import usersData from "./usersData"
 
-function MyProfile() {
-
-    
-
-    const userComponents= utilisateurs.map((user) => {
+class MyProfile extends React.Component {
+    constructor() {
+        super()
+        this.state = {
+            users: usersData
+        }
+    }
+    render() {
+        const userItems= this.state.users.map(item => 
+            <App image={item.image} 
+            prenom={item.prenom} 
+            nom={item.nom} 
+            dateNaissance={item.dateNaissance} 
+        message={item.message} />)  
+        
         return (
-            <App image={user.image} 
-            prenom={user.prenom} 
-            nom={user.nom} 
-            dateNaissance={user.dateNaissance} 
-            message={user.message} />
+            <div>
+            {userItems[0]}       
+            </div>
         )
 
-    })
-    return (
-        <div>
-  {userComponents[0]}
-    </div>
-    )
+    }
 }
 
 export default MyProfile
