@@ -5,30 +5,26 @@ import usersData from "./usersData"
 class Like extends React.Component {
     constructor() {
         super()
-        this.state= {
-            likeNumber : 0
+        this.state = {
+            users: usersData,
+            numberOfLike: 0
         }
         this.handleClick = this.handleClick.bind(this)
     }
 
     handleClick() {
-        this.setState(prevState => {
-
-            return {
-                likeNumber: prevState.likeNumber +1
-            }
-        })
-
+        this.state.users[this.props.index].like += 1;
+        this.forceUpdate();
     }
 
     render() {
-       
+        console.log(this.state.users);
         return (
             <div>
-            <button onClick={this.handleClick}>
-                <img src={LikeLogo} /> C'est super {this.state.likeNumber}
-            </button>
-        </div>
+                <button onClick={this.handleClick}>
+                    <img src={LikeLogo} /> C'est super {this.state.users[this.props.index].like}
+                </button>
+            </div>
         )
     }
 }

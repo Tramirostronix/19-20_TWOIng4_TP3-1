@@ -1,11 +1,14 @@
-.sectionProfile {
+body {
+	color : white;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
 
+.sectionProfile {
+	border: #000000 0.5em solid;
     text-align: center;
 	background-color: purple;
 	margin-right: 8rem; 
-	margin-left: 8rem; 
-
-	
+	margin-left: 8rem; 	
 }
 
 
@@ -15,6 +18,7 @@
 }
 
 .sectionMessage {
+	border: #000000 0.5em solid;
     text-align: center; 
 	background-color: blue;
 	margin-right: 8rem; 
@@ -49,14 +53,12 @@
 	display: inline; 
 	margin-right: 7rem;
 	font-size: 1.2rem; 
-	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
 }
 
 #nom{
 	display: inline;
 	font-size: 1.2rem;
-	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
-
 }
 
 .prenomNom {
@@ -66,7 +68,6 @@
 
 #naissance {
 	display: inline; 
-	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	margin-right: 4rem;
 	font-size: 1.5rem;
 }

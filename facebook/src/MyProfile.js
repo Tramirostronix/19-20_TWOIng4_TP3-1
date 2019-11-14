@@ -1,5 +1,6 @@
 import React from "react"
 import App from "./App"
+import Like from "./Like"
 import usersData from "./usersData"
 
 
@@ -9,40 +10,56 @@ class MyProfile extends React.Component {
         this.state = {
             users: usersData,
             nombre: 0,
+            bgBool: false,
+            item: ''
+
         }
         this.handleClickProfile = this.handleClickProfile.bind(this)
+        this.changeBackground = this.changeBackground.bind(this);   
     }
 
     handleClickProfile(i) {
-        this.setState({nombre : i})
+        this.setState({ nombre: i })
+        this.setState({ bgBool: !this.state.bgBool });
     }
 
+    changeBackground(bool) {
+        console.log(bool);
+        this.setState({
+           bgBool : bool    
+        });
+    }
 
     render() {
-        const userItems= this.state.users.map(item => 
-            <App image={item.image} 
-            prenom={item.prenom} 
-            nom={item.nom} 
-            dateNaissance={item.dateNaissance} 
-        message={item.message} />)  
-        
-
         return (
             <div>
                 <div id="buttonPosition">
-          <button className="button1" onClick={() =>this.handleClickProfile(0)}>
-                Gaétan
-            </button>
+                    <button className="button1" onClick={() => this.handleClickProfile(0)}>
+                        {this.state.users[0].prenom}
+                    </button>
 
-            <button className="button1" onClick={() =>this.handleClickProfile(1)}>
-                Cécile
-            </button>
+                    <button className="button1" onClick={() => this.handleClickProfile(1)}>
+                        {this.state.users[1].prenom}
+                    </button>
 
-            <button className="button1" onClick={() =>this.handleClickProfile(2)}>
-                Thomas
-            </button>
-            </div>
-            {userItems[this.state.nombre]}       
+                    <button className="button1" onClick={() => this.handleClickProfile(2)}>
+                        {this.state.users[2].prenom}
+                    </button>
+                </div>
+                {<App image={this.state.users[this.state.nombre].image}
+                    prenom={this.state.users[this.state.nombre].prenom}
+                    nom={this.state.users[this.state.nombre].nom}
+                    dateNaissance={this.state.users[this.state.nombre].dateNaissance}
+                    bgBool={this.state.bgBool}
+                    onHeaderClick={this.changeBackground}/>}
+                <div className="sectionMessage">
+                    <p>
+                        {this.state.users[this.state.nombre].message}
+                        <br />
+                        <br />
+                        <Like index={this.state.nombre}/>
+                    </p>
+                </div>
             </div>
         )
 
